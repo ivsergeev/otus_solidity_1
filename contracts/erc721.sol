@@ -59,7 +59,7 @@ contract OtusERC721 is ERC165, ERC721, ERC721Metadata{
         return "Otus ERC-721";
     }
     function symbol() public pure returns (string memory) {
-        return "OTUSERC20";
+        return "OTUSERC721";
     }
     function tokenURI(uint256 tokenId) public pure returns (string memory) {
         return "";

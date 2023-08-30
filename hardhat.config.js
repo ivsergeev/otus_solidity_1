@@ -7,7 +7,8 @@ module.exports = {
   solidity: "0.8.19",
   defaultNetwork: "hardhat",
   networks: {
-    hardhat: {},
+    hardhat: {      
+    },
     goerli: {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`]

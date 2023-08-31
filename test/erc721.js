@@ -19,4 +19,11 @@ describe("Otus ERC-721", function () {
         expect(await token.ownerOf(tokenId)).to.equal(addr1.address);
         expect(await token.balanceOf(addr1.address)).to.equal(1);
         });
+
+    it("Minting of tokens is possible only for the owner", async function () {
+        const { token, owner , addr1 } = await loadFixture(deployTokenFixture);
+        const tokenId = 1;
+
+        await expect(token.connect(addr1).mint(addr1.address, tokenId)).to.be.revertedWith("Invalid operation");
+        });
 });
